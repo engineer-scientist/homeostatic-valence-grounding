@@ -1,6 +1,6 @@
 # Homeostatic Grounding of Valence
 
-**Author:** Sarthak Sharma
+**Authors:** Sarthak Sharma and Grok Bot.
 
 This project asks a narrow, testable question:
 
