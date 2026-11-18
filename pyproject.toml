@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homeostatic-valence-grounding"
+version = "0.1.0"
+description = "Train a from-scratch embodied agent and test whether a shared, causal need representation is grounded in true body state."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Sarthak Sharma" }]
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.1",
+  "matplotlib>=3.8",
+  "pyyaml>=6.0",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+gym = ["gymnasium>=0.29"]
+
+[project.urls]
+Homepage = "https://github.com/engineer-scientist/homeostatic-valence-grounding"
+
+[project.scripts]
+hvg-train = "hvg.cli:main_train"
+hvg-probe = "hvg.cli:main_probe"
+hvg-steer = "hvg.cli:main_steer"
+hvg-patch = "hvg.cli:main_patch"
+hvg-markers = "hvg.cli:main_markers"
+hvg-decide = "hvg.cli:main_decide"
+hvg-fly = "hvg.cli:main_fly"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

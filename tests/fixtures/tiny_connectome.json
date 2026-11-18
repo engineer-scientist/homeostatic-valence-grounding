@@ -1,0 +1,21 @@
+{
+  "comment": "Tiny synthetic graph for offline tests. Not a biological connectome. Excitatory sugar pathway onto MN9; bitter/nociceptive pathway onto a withdrawal cell W, with inhibition onto MN9.",
+  "names": ["sugar_0", "sugar_1", "bitter_0", "noci_0", "inter_feed", "inter_aversive", "MN9", "W"],
+  "groups": {
+    "sugar": ["sugar_0", "sugar_1"],
+    "bitter": ["bitter_0"],
+    "nociceptive": ["noci_0"],
+    "MN9": ["MN9"],
+    "withdrawal": ["W"]
+  },
+  "edges": [
+    {"src": "sugar_0", "dst": "inter_feed", "sign": 1, "count": 20},
+    {"src": "sugar_1", "dst": "inter_feed", "sign": 1, "count": 20},
+    {"src": "inter_feed", "dst": "MN9", "sign": 1, "count": 25},
+    {"src": "sugar_0", "dst": "MN9", "sign": 1, "count": 15},
+    {"src": "bitter_0", "dst": "inter_aversive", "sign": 1, "count": 20},
+    {"src": "noci_0", "dst": "inter_aversive", "sign": 1, "count": 20},
+    {"src": "inter_aversive", "dst": "W", "sign": 1, "count": 25},
+    {"src": "inter_aversive", "dst": "MN9", "sign": -1, "count": 15}
+  ]
+}

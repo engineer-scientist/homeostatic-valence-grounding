@@ -1,0 +1,9 @@
+experiment: coupled
+seed: 0
+device: cpu
+train:
+  total_steps: 10000
+  instinct_frac: 0.0
+  frozen: true
+paths:
+  run_dir: runs/frozen

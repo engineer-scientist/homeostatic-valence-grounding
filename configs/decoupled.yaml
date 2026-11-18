@@ -1,0 +1,14 @@
+experiment: decoupled
+seed: 0
+device: cpu
+decouple:
+  mode: delay
+  delay: 20
+  buffer_size: 64
+train:
+  total_steps: 50000000
+  instinct_frac: 0.05
+  frozen: false
+  checkpoint_every_steps: 5000000
+paths:
+  run_dir: runs/decoupled

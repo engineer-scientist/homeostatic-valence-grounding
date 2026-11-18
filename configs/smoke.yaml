@@ -1,0 +1,32 @@
+experiment: coupled
+seed: 0
+device: cpu
+physics:
+  size: 12
+  horizon: 40
+  wound_prob: 0.01
+agent:
+  conv_channels: [8]
+  hidden_size: 64
+  gru_layers: 1
+  mlp_size: 64
+train:
+  total_steps: 2048
+  rollout_steps: 256
+  ppo_epochs: 2
+  minibatch_size: 64
+  instinct_frac: 0.05
+  frozen: false
+  checkpoint_every_steps: 2048
+  lr: 0.0003
+analysis:
+  n_fit_pairs: 16
+  n_test_pairs: 12
+  n_tradeoff_maps: 12
+  n_random_dirs: 3
+ethics:
+  max_steps_per_seed: 100000
+  high_damage_frac_max: 0.15
+  raise_wound_rate: false
+paths:
+  run_dir: runs/smoke

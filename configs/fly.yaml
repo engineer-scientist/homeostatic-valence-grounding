@@ -1,0 +1,6 @@
+# Official whole-brain resources are not bundled. Point connectome at a
+# downloaded edge list, or use the synthetic fixture for a dry run.
+connectome: tests/fixtures/tiny_connectome.json
+stim: sugar
+readout: MN9
+duration_ms: 200

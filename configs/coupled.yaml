@@ -1,0 +1,16 @@
+experiment: coupled
+seed: 0
+device: cpu
+agent:
+  conv_channels: [16, 32]
+  hidden_size: 256
+  gru_layers: 2
+  mlp_size: 256
+train:
+  total_steps: 50000000
+  rollout_steps: 1024
+  instinct_frac: 0.05
+  frozen: false
+  checkpoint_every_steps: 5000000
+paths:
+  run_dir: runs/coupled
